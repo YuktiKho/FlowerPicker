@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flask Form Example</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <form action="/submit" method="post">
+        <div class="form-step" data-step="1">
+            <input type="text" id="occasion" name="occasion" required>
+            <label for="occasion" class="label-name"> What is the occasion?</label>
+            
+            <button type="button" class="next-step">Next</button>
+        </div>
+
+        <div class="form-step" data-step="2">
+            
+            <input type="text" id="receiver" name="receiver" required>
+            <label for="receiver">Who is going to receive them?</label>
+            <button type="button" class="prev-step">Previous</button>
+            <button type="button" class="next-step">Next</button>
+        </div>
+
+        <div class="form-step" data-step="3">
+            
+            <input type="text" id="color" name="color" required>
+            <label for="color">Any specific color?</label>
+            <button type="button" class="prev-step">Previous</button>
+            <button type="button" class="next-step">Next</button>
+        </div>
+
+        <div class="form-step" data-step="4">
+            
+            <input type="text" id="fragrance" name="fragrance" required>
+            <label for="fragrance">Any fragrance of interest?</label>
+            <button type="button" class="prev-step">Previous</button>
+            <button type="button" class="next-step">Next</button>
+        </div>
+
+        <div class="form-step" data-step="5">
+            
+            <input type="text" id="msg" name="msg" required>
+            <label for="msg">Message you want to convey?</label>
+            <button type="button" class="prev-step">Previous</button>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var formSteps = $('.form-step');
+            var currentStep = 1;
+
+            // Hide all form steps except the first one
+            formSteps.not('[data-step="1"]').hide();
+
+            $('.next-step').click(function () {
+                formSteps.filter('[data-step="' + currentStep + '"]').hide();
+                currentStep++;
+                formSteps.filter('[data-step="' + currentStep + '"]').show();
+            });
+
+            $('.prev-step').click(function () {
+                formSteps.filter('[data-step="' + currentStep + '"]').hide();
+                currentStep--;
+                formSteps.filter('[data-step="' + currentStep + '"]').show();
+            });
+        });
+    </script>
+</body>
+</html>

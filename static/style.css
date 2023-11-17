@@ -1,0 +1,155 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&family=Edu+TAS+Beginner:wght@500&family=Lora:wght@400;500&family=Merriweather&family=Playfair+Display:ital@1&family=Poppins:ital@1&family=Roboto:ital@1&display=swap');
+body {
+    background-image: url('/static/flow.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-repeat: no-repeat; /* Prevent the background from repeating */
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+
+html, body {
+    height: 100%;
+}
+
+form{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    padding: 30px;
+}
+
+.form-step{
+    display: block;
+    margin-bottom: 10px; 
+    width: 60%;
+    height: 300px;
+    padding: 30px;
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.form-step {
+    position: relative;
+    width: 100%;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 3px solid white;
+    background: transparent;
+    outline: 0;
+    transition: border-bottom-color 0.3s ease-in-out;
+    font-size: 25px;
+
+  }
+  
+  label {
+    color: #F9F5F6;
+    position: absolute;
+    margin-top: 20px;
+    margin-left: 20px;
+    top: 20%;
+    font-family: 'Roboto', sans-serif;
+    left: 20px;
+    font-size: 30px;
+    padding-bottom: 20px ;
+    transform: translateY(-50%);
+    transition: top 0.3s ease-in-out, font-size 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  input[type=text]:focus, input[type=text]:valid {
+    border-radius: 10px;
+    background: #F9F5F6;
+
+}
+
+input[type=text]:focus + label, input[type=text]:valid + label {
+    top: 0;
+    font-size: 25px;
+    color: #F9F5F6;
+}
+
+
+button{
+    width: auto;
+	background: #FDCEDF;
+	color: black;
+	border: 0 none;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 15px;
+	margin: 20px;
+    text-align: center;
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    font-size: 25px;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+button:hover, button:focus {
+
+        background: transparent;
+        color: #f4c2c2;
+    
+}
+
+input[type=submit] {
+    width: auto;
+	background: #FDCEDF;
+	color: black;
+	border: 0 none;
+	border-radius: 5px;
+	cursor: pointer;
+	padding: 15px;
+	margin: 20px;
+    text-align: center;
+    font-family: 'Lora', serif;
+    text-decoration: none;
+    font-size: 25px;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+}
+
+input[type=submit]:hover {
+    background: transparent;
+    color: #f4c2c2;
+}
+
+
+/* Your existing CSS styles */
+
+.response-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #F9F5F6;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    border-radius: 10px ;
+    align-items: justify;
+    font-family: 'Poppins', sans-serif;
+}
+
+.response-container p{
+    font-size: 30px;
+
+}
+
+
